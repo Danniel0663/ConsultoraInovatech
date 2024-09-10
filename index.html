@@ -9,6 +9,25 @@
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <style>
+        .servicio-info {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+        }
+        .imagen-port {
+            position: relative;
+        }
+        .hover-galeria p {
+    font-size: 15px; /* Reducido de 14px a 12px */
+}
+    </style>
 </head>
 
 <body>
@@ -55,31 +74,71 @@
                 <h2 class="titulo">Nuestros Servicios</h2>
                 <div class="galeria-port">
                     <div class="imagen-port">
-                        <img src="img/Transformación-Digital.png" alt="Transformación Digital">
+                        <img src="img/Transformación-Digital.png" alt="Transformación Digital">
                         <div class="hover-galeria">
                             <img src="img/icono-servicio.png" alt="">
                             <p>Transformación Digital</p>
                         </div>
+                        <div class="servicio-info">
+                            <h3>Transformación Digital</h3>
+                            <p>Ayudamos a las empresas a adoptar tecnologías digitales para mejorar sus procesos y mantenerse competitivas. Nuestros servicios incluyen:</p>
+                            <ul>
+                                <li>Evaluación de madurez digital</li>
+                                <li>Desarrollo de estrategias de transformación</li>
+                                <li>Implementación de nuevas tecnologías</li>
+                                <li>Capacitación y gestión del cambio</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/Consultoría-IT.png" alt="Consultoría IT">
+                        <img src="img/Consultoría-IT.png" alt="Consultoría IT">
                         <div class="hover-galeria">
                             <img src="img/icono-servicio.png" alt="">
                             <p>Consultoría IT</p>
                         </div>
+                        <div class="servicio-info">
+                            <h3>Consultoría IT</h3>
+                            <p>Ofrecemos asesoramiento experto en TI para optimizar sus sistemas. Nuestros servicios incluyen:</p>
+                            <ul>
+                                <li>Auditoría de sistemas y procesos IT</li>
+                                <li>Planificación estratégica de TI</li>
+                                <li>Optimización de infraestructura</li>
+                                <li>Gestión de proyectos tecnológicos</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/Seguridad-Informática.png" alt="Seguridad Informática">
+                        <img src="img/Seguridad-Informática.png" alt="Seguridad Informática">
                         <div class="hover-galeria">
                             <img src="img/icono-servicio.png" alt="">
                             <p>Seguridad Informática</p>
                         </div>
+                        <div class="servicio-info">
+                            <h3>Seguridad Informática</h3>
+                            <p>Protegemos los activos digitales de su empresa contra amenazas cibernéticas. Nuestros servicios incluyen:</p>
+                            <ul>
+                                <li>Evaluación de vulnerabilidades</li>
+                                <li>Implementación de soluciones de seguridad</li>
+                                <li>Gestión de identidades y accesos</li>
+                                <li>Formación en ciberseguridad</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="imagen-port">
-                        <img src="img/Migración-a-la-Nube.png" alt="Migración a la nube">
+                        <img src="img/Migración-a-la-Nube.png" alt="Migración a la nube">
                         <div class="hover-galeria">
                             <img src="img/icono-servicio.png" alt="">
                             <p>Migración a la Nube</p>
+                        </div>
+                        <div class="servicio-info">
+                            <h3>Migración a la Nube</h3>
+                            <p>Facilitamos la transición de sus sistemas a entornos cloud. Nuestros servicios incluyen:</p>
+                            <ul>
+                                <li>Análisis y planificación de la migración</li>
+                                <li>Implementación de soluciones cloud</li>
+                                <li>Optimización de costos en la nube</li>
+                                <li>Gestión y monitoreo de entornos cloud</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -118,15 +177,28 @@
             </div>
             <div class="content-foo">
                 <h4>Redes Sociales</h4>
-                <p>LinkedIn | Twitter</p>
+                <p>Tik Tok |  InovatecOficial</p>
             </div>
             <div class="content-foo">
                 <h4>Ubicación</h4>
-                <p>Bogotá, Colombia</p>
+                <p>Bogotá,  CALLE 155 # 7D - 29 </p>
             </div>
         </div>
         <h2 class="titulo-final">&copy; 2024 Consultora Inovatech S.A.S. | Todos los derechos reservados</h2>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const servicios = document.querySelectorAll('.imagen-port');
+
+            servicios.forEach(servicio => {
+                servicio.addEventListener('click', function() {
+                    const info = this.querySelector('.servicio-info');
+                    info.style.display = info.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
